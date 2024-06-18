@@ -1,5 +1,381 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  margin-top: 20px;
+  background-image: var(--background-image);
+  background-color: var(--background-color);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  margin-left: 20px;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.rec-decor{
+  position: absolute;
+  color: var(--rec-color);
+  text-transform: uppercase;
+  top: 24px;
+  right: 49px;
+}
+
+.decorated-zone::before{
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--corners-color);
+  border-bottom: 1px solid var(--corners-color);
+  left: 20px;
+  bottom: 20px;
+}
+
+.rec-decor::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: -5px -20px 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--rec-color);
+  background-color: var(--rec-color);
+  top: 50%;
+  right: 0;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--corners-color);
+  border-top: 1px solid var(--corners-color);
+  right: 20px;
+  top: 20px;
+}
+
+.header__theme-menu-button{
+  background-color: transparent;
+  border: none;
+  font-family: 'IBM Plex Mono', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active{
+  pointer-events: none;
+  border: 1px solid var(--border);
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button{
+  color:var(--accent-color);
+}
+
+.header__theme-menu-button:focus{
+  outline: none;
+}
+
+.header__theme-menu-button:hover{
+  border: 1px solid var(--border-hover);
+}
+
+.header__theme-menu-button:focus-visible{
+  border-bottom: 1px solid var(--border);
+}
+
+.link{
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--link-shadow);
+}
+
+.link:hover{
+  text-shadow: 2px 2px 0px var(--link-shadow);
+  border-bottom: 1px solid var(--link);
+}
+
+.link:focus{
+  text-shadow: 2px 2px 0px var(--link-shadow);
+  outline: 1px solid var(--link);
+}
+
+h2{
+font-family: 'IBM Plex Mono', serif;
+font-size: 18px;
+font-weight: 700;
+line-height: 23.4px;
+text-align: left;
+}
+
+h3{
+  margin-bottom: 10px;
+}
+
+h4{
+  margin-bottom: 10px;
+}
+
+p{
+  font-family: 'IBM Plex Mono', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+  color: var(--text);
+  padding-bottom: 20px;
+}
+
+.accent-bold{
+  font-family: 'IBM Plex Mono', serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  background-color: var(--back-text-color);
+  padding-bottom: 0px;
+}
+
+.accent{
+  font-family: 'IBM Plex Mono', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+  background-color: var(--back-text-color);
+}
+
+.header {
+  min-height: 668px;
+  block-size: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style-type: none;
+}
+
+.title{
+  font-family: 'IBM Plex Mono', serif;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 82.5%;
+  text-align: left;
+  color: var(--title-color);
+  text-shadow: 5px 5px 0px var(--title-shadow-color); 
+  margin-left: -20px;
+}
+
+.opinion{
+  justify-self: end;
+  align-self: center;
+  max-width: 48vw;
+  color: var(--paragraf);
+  background-color: var(--back-text-color);
+}
+
+.title-block{
+  color:var(--qwestion);
+}
+
+.block_why{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  padding-bottom: 60px;
+}
+
+.card-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.block_what{
+  padding-bottom: 60px;
+}
+
+.title_block_what{
+padding-bottom: 20px;
+max-width: 30vw;
+}
+
+.how-advice{
+  padding-bottom: 10px;
+}
+
+.block_how{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  padding-bottom: 60px;
+}
+
+.title-galery{
+  padding-bottom: 10px;
+}
+
+.galery {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 
+  'sunset sunset ice-cream'
+  'tape books ice-cream'
+  'tape street street';
+  margin-bottom: 60px;
+}
+
+.photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sunset {
+  grid-area: sunset;
+}
+
+.ice-cream {
+  grid-area: ice-cream;
+}
+
+.books {
+  grid-area: books;
+}
+
+.tape {
+  grid-area: tape;
+}
+
+.street {
+  grid-area: street;
+}
+
+.footer{
+  min-height: 668px;
+  block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title{
+  font-family: 'IBM Plex Mono', serif;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 129.53px;
+  text-align: left;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0px var(--title-shadow-color); 
+}
+
+@media (width >= 768px) and (width < 1024px){
+  .header__theme-menu{
+    justify-self: end;
+    align-self: center;
+  }
+
+  .header__theme-menu-list{
+    flex-direction: column;
+  }
+
+  .block_why{
+    gap: 20px;
+  }
+
+  .block_how{
+    gap: 20px;
+  }
+
+  .card-list{
+    display: block;
+  }
+}
+
+@media (width >= 320px) and (width < 768px){
+  .page {
+    margin: 0px;
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .title{
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-left: -2px;
+  }
+
+  .header__theme-menu{
+    justify-self: end;
+    align-self: center;
+  }
+
+  .header{
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .header__theme-menu-list{
+    flex-direction: column;
+  }
+
+  .opinion{
+    justify-self: stretch;
+    max-width: 100vw;
+  }
+
+  .block_why{
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  .title-block-why{
+    padding-bottom: 20px;
+  }
+
+  .title_block_what{
+    max-width: 95vw;
+  }
+
+  .block_what{
+    padding-bottom: 30px;
+  }
+
+  .card-list{
+    display: block;
+  }
+
+  .block_how{
+    display: block;
+    padding-bottom: 30px;
+  }
+
+  .title-block-how{
+    padding-bottom: 20px;
+  }
+
+  .title-galery{
+    padding-bottom: 0px;
+  }
+
+  .galery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 45px;
+  }
+
+  .footer-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+  
 }
