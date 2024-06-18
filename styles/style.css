@@ -13,7 +13,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
-.rec-decor{
+.rec-decor {
   position: absolute;
   color: var(--rec-color);
   text-transform: uppercase;
@@ -21,7 +21,7 @@
   right: 49px;
 }
 
-.decorated-zone::before{
+.decorated-zone::before {
   content: "";
   position: absolute;
   width: 25px;
@@ -32,7 +32,7 @@
   bottom: 20px;
 }
 
-.rec-decor::after{
+.rec-decor::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -56,10 +56,10 @@
   top: 20px;
 }
 
-.header__theme-menu-button{
+.header__theme-menu-button {
   background-color: transparent;
   border: none;
-  font-family: 'IBM Plex Mono', serif;
+  font-family: "IBM Plex Mono", serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
@@ -67,61 +67,61 @@
   text-transform: lowercase;
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   pointer-events: none;
   border: 1px solid var(--border);
   color: var(--accent-color);
 }
 
-.header__theme-menu-button{
-  color:var(--accent-color);
+.header__theme-menu-button {
+  color: var(--accent-color);
 }
 
-.header__theme-menu-button:focus{
+.header__theme-menu-button:focus {
   outline: none;
 }
 
-.header__theme-menu-button:hover{
+.header__theme-menu-button:hover {
   border: 1px solid var(--border-hover);
 }
 
-.header__theme-menu-button:focus-visible{
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--border);
 }
 
-.link{
+.link {
   text-decoration: none;
   text-shadow: 2px 2px 0px var(--link-shadow);
 }
 
-.link:hover{
+.link:hover {
   text-shadow: 2px 2px 0px var(--link-shadow);
   border-bottom: 1px solid var(--link);
 }
 
-.link:focus{
+.link:focus {
   text-shadow: 2px 2px 0px var(--link-shadow);
   outline: 1px solid var(--link);
 }
 
-h2{
-font-family: 'IBM Plex Mono', serif;
-font-size: 18px;
-font-weight: 700;
-line-height: 23.4px;
-text-align: left;
+h2 {
+  font-family: "IBM Plex Mono", serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
 }
 
-h3{
+h3 {
   margin-bottom: 10px;
 }
 
-h4{
+h4 {
   margin-bottom: 10px;
 }
 
-p{
-  font-family: 'IBM Plex Mono', serif;
+p {
+  font-family: "IBM Plex Mono", serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -130,8 +130,8 @@ p{
   padding-bottom: 20px;
 }
 
-.accent-bold{
-  font-family: 'IBM Plex Mono', serif;
+.accent-bold {
+  font-family: "IBM Plex Mono", serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -140,8 +140,8 @@ p{
   padding-bottom: 0px;
 }
 
-.accent{
-  font-family: 'IBM Plex Mono', serif;
+.accent {
+  font-family: "IBM Plex Mono", serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -158,25 +158,25 @@ p{
   padding-bottom: 40px;
 }
 
-.header__theme-menu-list{
+.header__theme-menu-list {
   display: flex;
   justify-content: center;
   gap: 10px;
   list-style-type: none;
 }
 
-.title{
-  font-family: 'IBM Plex Mono', serif;
+.title {
+  font-family: "IBM Plex Mono", serif;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 82.5%;
   text-align: left;
   color: var(--title-color);
-  text-shadow: 5px 5px 0px var(--title-shadow-color); 
+  text-shadow: 5px 5px 0px var(--title-shadow-color);
   margin-left: -20px;
 }
 
-.opinion{
+.opinion {
   justify-self: end;
   align-self: center;
   max-width: 48vw;
@@ -184,58 +184,58 @@ p{
   background-color: var(--back-text-color);
 }
 
-.title-block{
-  color:var(--qwestion);
+.title-block {
+  color: var(--qwestion);
 }
 
-.block_why{
+.block_why {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px;
   padding-bottom: 60px;
 }
 
-.card-list{
+.card-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
-.block_what{
+.block_what {
   padding-bottom: 60px;
 }
 
-.title_block_what{
-padding-bottom: 20px;
-max-width: 30vw;
+.title_block_what {
+  padding-bottom: 20px;
+  max-width: 30vw;
 }
 
-.how-advice{
+.how-advice {
   padding-bottom: 10px;
 }
 
-.block_how{
+.block_how {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px;
   padding-bottom: 60px;
 }
 
-.title-galery{
+.title-galery {
   padding-bottom: 10px;
 }
 
 .galery {
   display: grid;
   gap: 20px;
-  grid-template-areas: 
-  'sunset sunset ice-cream'
-  'tape books ice-cream'
-  'tape street street';
+  grid-template-areas:
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
   margin-bottom: 60px;
 }
 
-.photo{
+.photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -261,7 +261,7 @@ max-width: 30vw;
   grid-area: street;
 }
 
-.footer{
+.footer {
   min-height: 668px;
   block-size: 100vh;
   display: flex;
@@ -269,101 +269,101 @@ max-width: 30vw;
   align-items: center;
 }
 
-.footer-title{
-  font-family: 'IBM Plex Mono', serif;
+.footer-title {
+  font-family: "IBM Plex Mono", serif;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   line-height: 129.53px;
   text-align: left;
   color: var(--title-color);
-  text-shadow: 2px 2px 0px var(--title-shadow-color); 
+  text-shadow: 2px 2px 0px var(--title-shadow-color);
 }
 
-@media (width >= 768px) and (width < 1024px){
-  .header__theme-menu{
+@media (width >= 768px) and (width < 1024px) {
+  .header__theme-menu {
     justify-self: end;
     align-self: center;
   }
 
-  .header__theme-menu-list{
+  .header__theme-menu-list {
     flex-direction: column;
   }
 
-  .block_why{
+  .block_why {
     gap: 20px;
   }
 
-  .block_how{
+  .block_how {
     gap: 20px;
   }
 
-  .card-list{
+  .card-list {
     display: block;
   }
 }
 
-@media (width >= 320px) and (width < 768px){
+@media (width >= 320px) and (width < 768px) {
   .page {
     margin: 0px;
     margin-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
   }
-  .title{
+  .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin-left: -2px;
   }
 
-  .header__theme-menu{
+  .header__theme-menu {
     justify-self: end;
     align-self: center;
   }
 
-  .header{
+  .header {
     padding-bottom: 20px;
     margin-bottom: 30px;
   }
 
-  .header__theme-menu-list{
+  .header__theme-menu-list {
     flex-direction: column;
   }
 
-  .opinion{
+  .opinion {
     justify-self: stretch;
     max-width: 100vw;
   }
 
-  .block_why{
+  .block_why {
     display: block;
     padding-bottom: 30px;
   }
 
-  .title-block-why{
+  .title-block-why {
     padding-bottom: 20px;
   }
 
-  .title_block_what{
+  .title_block_what {
     max-width: 95vw;
   }
 
-  .block_what{
+  .block_what {
     padding-bottom: 30px;
   }
 
-  .card-list{
+  .card-list {
     display: block;
   }
 
-  .block_how{
+  .block_how {
     display: block;
     padding-bottom: 30px;
   }
 
-  .title-block-how{
+  .title-block-how {
     padding-bottom: 20px;
   }
 
-  .title-galery{
+  .title-galery {
     padding-bottom: 0px;
   }
 
@@ -377,5 +377,4 @@ max-width: 30vw;
   .footer-title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
-  
 }
