@@ -26,6 +26,7 @@
   --border-hover: rgba(255, 0, 112, 0.4);
   --rec-color: rgba(255, 0, 112, 1);
   --corners-color: rgba(255, 0, 112, 1);
+  --visible: visible;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,5 +47,6 @@
     --border-hover: rgba(255, 0, 112, 0.4);
     --rec-color: rgba(255, 0, 112, 1);
     --corners-color: rgba(255, 0, 112, 1);
+    --visible: visible;
   }
 }

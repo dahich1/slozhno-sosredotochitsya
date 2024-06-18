@@ -1,15 +1,15 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  margin-top: 20px;
   background-image: var(--background-image);
   background-color: var(--background-color);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  margin-right: 20px;
-  margin-left: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -17,8 +17,14 @@
   position: absolute;
   color: var(--rec-color);
   text-transform: uppercase;
-  top: 24px;
-  right: 49px;
+  top: 20px;
+  right: 29px;
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  visibility: var(--visible);
 }
 
 .decorated-zone::before {
@@ -28,7 +34,7 @@
   height: 25px;
   border-left: 1px solid var(--corners-color);
   border-bottom: 1px solid var(--corners-color);
-  left: 20px;
+  left: 0px;
   bottom: 20px;
 }
 
@@ -52,13 +58,15 @@
   height: 25px;
   border-right: 1px solid var(--corners-color);
   border-top: 1px solid var(--corners-color);
-  right: 20px;
+  right: 0px;
   top: 20px;
 }
 
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
+  width: 70px;
+  height: 26px;
   font-family: "IBM Plex Mono", serif;
   font-size: 18px;
   font-weight: 400;
@@ -79,7 +87,8 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--border-hover);
+  outline: 1px solid var(--border-hover);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -101,23 +110,7 @@
   outline: 1px solid var(--link);
 }
 
-h2 {
-  font-family: "IBM Plex Mono", serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23.4px;
-  text-align: left;
-}
-
-h3 {
-  margin-bottom: 10px;
-}
-
-h4 {
-  margin-bottom: 10px;
-}
-
-p {
+.text {
   font-family: "IBM Plex Mono", serif;
   font-size: 18px;
   font-weight: 400;
@@ -125,6 +118,12 @@ p {
   text-align: left;
   color: var(--text);
   padding-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .accent-bold {
@@ -135,6 +134,7 @@ p {
   text-align: left;
   background-color: var(--back-text-color);
   padding-bottom: 0px;
+  color: var(--answer);
 }
 
 .accent {
@@ -144,15 +144,17 @@ p {
   line-height: 23.4px;
   text-align: left;
   background-color: var(--back-text-color);
+  color: var(--answer);
 }
 
 .header {
+  position: relative;
   min-height: 668px;
   block-size: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  margin-bottom: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .header__theme-menu-list {
@@ -183,6 +185,11 @@ p {
 
 .title-block {
   color: var(--qwestion);
+  font-family: "IBM Plex Mono", serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
 }
 
 .block_why {
@@ -190,6 +197,7 @@ p {
   grid-template-columns: 1fr 2fr;
   gap: 10px;
   padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 .card-list {
@@ -208,7 +216,13 @@ p {
 }
 
 .how-advice {
-  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-ul {
+  margin-bottom: 10px;
 }
 
 .block_how {
@@ -219,7 +233,7 @@ p {
 }
 
 .title-galery {
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .galery {
@@ -259,6 +273,7 @@ p {
 }
 
 .footer {
+  position: relative;
   min-height: 668px;
   block-size: 100vh;
   display: flex;
@@ -276,7 +291,7 @@ p {
   text-shadow: 2px 2px 0px var(--title-shadow-color);
 }
 
-@media (width >= 768px) and (width < 1024px) {
+@media (1024px > width >= 768px) {
   .header__theme-menu {
     justify-self: end;
     align-self: center;
@@ -299,13 +314,25 @@ p {
   }
 }
 
-@media (width >= 320px) and (width < 768px) {
+@media (768px > width >= 374px) {
   .page {
     margin: 0px;
-    margin-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
   }
+
+  .decorated-zone::before {
+    bottom: 10px;
+  }
+
+  .decorated-zone::after {
+    top: 10px;
+  }
+
+  .rec-decor {
+    top: 10px;
+  }
+
   .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin-left: -2px;
@@ -317,8 +344,9 @@ p {
   }
 
   .header {
-    padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .header__theme-menu-list {
@@ -333,6 +361,7 @@ p {
   .block_why {
     display: block;
     padding-bottom: 30px;
+    padding-top: 40px;
   }
 
   .title-block-why {
@@ -362,13 +391,14 @@ p {
 
   .title-galery {
     padding-bottom: 0px;
+    margin-bottom: 10px;
   }
 
   .galery {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
   }
 
   .footer-title {
