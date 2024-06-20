@@ -291,7 +291,7 @@
   text-shadow: 2px 2px 0px var(--title-shadow-color);
 }
 
-@media (width <= 768px) {
+@media (width <= 1023px) {
   .header__theme-menu {
     justify-self: end;
     align-self: center;
@@ -314,7 +314,7 @@
   }
 }
 
-@media (width <= 375px) {
+@media (width <= 767px) {
   .page {
     margin: 0px;
     padding-right: 10px;
